@@ -1,0 +1,76 @@
+@import 'config';
+
+.testimonial {
+  &-container {
+    position: relative;
+    margin: 20px auto;
+    padding: 50px 80px;
+    max-width: 768px;
+    background-color: #476ce4;
+    border-radius: 15px;
+    color: #fff;
+  }
+  text-align: justify;
+  line-height: 1.75rem;
+}
+
+.fa-quote {
+  position: absolute;
+  top: 80px;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.3);
+  &-right {
+    left: 40px;
+  }
+  &-left {
+    right: 40px;
+  }
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  .user-image {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .user-details {
+    margin-left: 10px;
+  }
+  .role {
+    margin: 10px 0;
+    font-weight: normal;
+  }
+}
+
+.progress-bar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 20px 30px;
+  }
+
+  .fa-quote {
+    display: none;
+  }
+}
